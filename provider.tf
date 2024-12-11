@@ -31,7 +31,7 @@ resource "aws_subnet" "public_subnet" {
   cidr_block = cidersubnet(aws_vpc.custom_vpc.cidr_block, 8, count.index+1)
   }
 
-  resource 
+  
 
 
 
