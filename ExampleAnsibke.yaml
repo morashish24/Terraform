@@ -1,0 +1,17 @@
+---
+
+-name: 
+ hosts: all
+ become: yes
+
+ tasks: 
+
+   -name: 
+  
+  
+   -name: 
+  
+  
+   -name: 
+  
+ 
