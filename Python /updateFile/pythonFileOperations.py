@@ -12,4 +12,4 @@
 
 # few function are in build and no need to do pip install or import it in our file like opening a file or closing a file 
 
-def update_server_config 
+def update_server_config ()
