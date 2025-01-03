@@ -1,3 +1,6 @@
+# Abhishek veeramalla video 10 
+
+
 folders = input ("Please provide folder names with spaces").split()
 
 for folder in folders:
