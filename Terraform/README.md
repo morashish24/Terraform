@@ -1,2 +1,3 @@
 # Terraform
-Practice creating resource in cloud
+
+Creating VPC and EKS cluster
