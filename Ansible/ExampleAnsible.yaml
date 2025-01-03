@@ -1,15 +1,20 @@
 # write 5 Ansible playbooks
 
+#1. You are setting up a web server and need to install Nginx as the primary web server. This will ensure that the package is installed on all the servers in the web_server group 
+
 ---
 
--name: 
- hosts: all
- become: yes
- become_user: root 
+- name: Install nginx on ubuntu server
+  hosts: web_servers
+  become: yes
+  become_user: root 
 
- tasks: 
-
-   -name: 
+  tasks: 
+    - name: install nginx
+      apt:
+        name: nginx
+        state: present 
+     
   
   
    -name: 
