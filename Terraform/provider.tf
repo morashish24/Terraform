@@ -30,7 +30,15 @@ resource "aws_subnet" "public_subnet" {
   count = length(var.vpc_availability_zones)
   cidr_block = cidersubnet(aws_vpc.custom_vpc.cidr_block, 8, count.index+1)
   }
-  
+
+resource "aws_subnet" "private_subnet" {
+  vpc_id = aws_vpc.custom_vpc.id
+}
+
+
+
+
+
   
   
 
