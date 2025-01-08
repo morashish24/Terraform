@@ -7,7 +7,7 @@ def check_website_status (url ) :
       print (f"website {url} is UP!")
       
     else:
-      print( f"Website {url} is DOWN! Stauts code: {response.status_code}"")
+      print(f"Website {url} is DOWN! Stauts code: {response.status_code}")
   except:
     
     requests.exceptions.RequestException as e:
@@ -20,5 +20,4 @@ def check_website_status (url ) :
   website_url = "https://example.com"
   
   
-check_website_status(website_url)  
-  
+check_website_status(website_url)    
