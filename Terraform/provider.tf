@@ -7,11 +7,12 @@ terraform {
   }
 }
 
+
 # Configure the AWS Provider
+
 provider "aws" {
   region = "us-east-1"
 }
-
 # Create a VPC
 resource "aws_vpc" "custom_vpc" {
   cidr_block = "10.0.0.0/16"
@@ -25,11 +26,6 @@ variable "vpc_availability_zones" {
   description = "Availability Zones"
   default = ["us-east-1a", "us-east-1b"]
 }
-resource "aws_subnet" "public_subnet" {
-  vpc_id     = aws_vpc.custom_vpc.id
-  count = length(var.vpc_availability_zones)
-  cidr_block = cidersubnet(aws_vpc.custom_vpc.cidr_block, 8, count.index+1)
-  }
 
 resource "aws_subnet" "private_subnet" {
   vpc_id = aws_vpc.custom_vpc.id
