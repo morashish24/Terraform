@@ -38,9 +38,6 @@ variable "vpc_availability_zones" {
   vpc_id = aws_vpc.custom_vpc.id
 }*/
 
-provider "aws" {
-  region = "us-east-1" # Update the region as needed
-}
 
 resource "aws_s3_bucket" "terraform_state" {
   bucket = "my-terraform-state-bucket-12345" # Use a unique name
