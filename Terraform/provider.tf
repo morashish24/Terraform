@@ -1,11 +1,11 @@
 terraform {
 
-  /* backend "s3" {
+  backend "s3" {
     bucket         = "my-terraform-state-bucket-12345" # Replace with your bucket name
     key            = "terraform/state/terraform.tfstate" # Path to store the state file
     region         = "us-east-1" # Update the region as needed
     encrypt        = true
-  }*/
+  }
   required_providers {
     aws = {
       source  = "hashicorp/aws"
