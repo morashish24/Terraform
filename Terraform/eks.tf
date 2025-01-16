@@ -19,6 +19,6 @@ module "eks" {
 
   tags = {
     Environment = "dev"
-    Team        = "devops"d
+    Team        = "devops"
   }
 }
