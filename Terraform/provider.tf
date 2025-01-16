@@ -40,7 +40,7 @@ variable "vpc_availability_zones" {
 
 
 resource "aws_s3_bucket" "terraform_state" {
-  bucket = "my-terraform-state-bucket-12345" # Use a unique name
+  bucket = "my-terraform-state-bucket-amor" # Use a unique name
   acl    = "private"
 
   versioning {
