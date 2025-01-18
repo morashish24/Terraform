@@ -37,3 +37,9 @@ resource "aws_route_table" "demo_route_table" {
 
   }
 }
+
+resource "aws_route_table_association" "demo_rt_asssociation" {
+
+  subnet_id = aws_subnet.subnet1.id
+  route_table_id = aws_route_table.demo_route_table.id
+}
