@@ -39,16 +39,6 @@ variable "vpc_availability_zones" {
 }*/
 
 
-resource "aws_s3_bucket" "terraform_state" {
-  bucket = "my-terraform-state-bucket-amor" # Use a unique name
-  acl    = "private"
-
-  versioning {
-    enabled = true
-  }
-
-}
-
 
 
   
