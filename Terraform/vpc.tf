@@ -12,7 +12,7 @@ resource "aws_subnet" "subnet1"{
   availability_zone = "us-east-1a"
 }
 
-resource "internet_gateway" "DemoIGW" {
+resource "aws_internet_gateway" "DemoIGW" {
   vpc_id = aws_vpc.main.id
 
   tags = {
