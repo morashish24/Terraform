@@ -25,3 +25,15 @@ resource "aws_internet_gateway" "DemoIGW" {
     Name = "DemoGW" 
   }
 }
+
+resource "aws_route_table" "demo_route_table" {
+  
+  vpc_id = aws_vpc_main.id 
+
+  route { 
+
+    cidr = 0.0.0.0/0
+    gateway_id = aws_internet_gateway.DemoIGW.id
+
+  }
+}
