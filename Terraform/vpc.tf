@@ -28,7 +28,7 @@ resource "aws_internet_gateway" "DemoIGW" {
 
 resource "aws_route_table" "demo_route_table" {
   
-  vpc_id = aws_vpc_main.id 
+  vpc_id = aws_vpc.main.id 
 
   route { 
 
