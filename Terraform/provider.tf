@@ -21,6 +21,10 @@ provider "aws" {
   region = "us-east-1"
 }
 
+provider "internet" {
+
+}
+
 variable "vpc_availability_zones" {
   type = list (string)
   description = "Availability Zoneds"
