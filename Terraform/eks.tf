@@ -5,7 +5,7 @@ module "eks" {
 
     subnet_ids = aws_subnet.subnet1.id
 
-    vpc_id = aws_vpc.DemoVPCAmor.id
+    vpc_id = aws_vpc.main.id
 
 
 }
