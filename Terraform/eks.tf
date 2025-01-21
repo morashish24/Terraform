@@ -3,7 +3,7 @@ module "eks" {
     cluster_name = "TerraformDemoCluster"
     cluster_version = "1.27"
 
-    subnet_ids = [aws_subnet.subnet1.id]
+    subnet_ids = ["aws_subnet.subnet1.id","aws_subnet.subnet2.id"]
 
 
     vpc_id = aws_vpc.main.id
