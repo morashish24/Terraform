@@ -1,7 +1,7 @@
    resource "aws_security_group" "demo_sg" {
     name        = "demo-security-group"
     description = "Security group for example resources"
-    vpc_id      = "aws_vpc.main.id" # Replace with your VPC ID
+    vpc_id      = aws_vpc.main.id # Replace with your VPC ID
 
     ingress {
         from_port   = 22
