@@ -6,7 +6,7 @@ module "eks" {
     subnet_ids = ["aws_subnet.subnet1.id"]
 
 
-    vpc_id = "aws_vpc.main.id"
+    vpc_id = aws_vpc.main.id
 
     eks_managed_node_groups = {
 
