@@ -15,8 +15,8 @@ module "eks" {
         node_group = {
             ami_type       = "AL2_x86_64"
             instance_types = ["m6i.large"]
-            min_sixw = 2
-            max_sixe = 6
+            min_size = 2
+            max_size = 6
             desired_size = 2
         }
     }
