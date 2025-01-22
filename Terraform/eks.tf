@@ -8,6 +8,9 @@ module "eks" {
 
     vpc_id = aws_vpc.main.id
 
+    ami_type       = "AL2_x86_64"
+    instance_types = ["m6i.large"]
+
     eks_managed_node_groups = {
 
         nodoe_group = {
