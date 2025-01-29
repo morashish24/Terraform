@@ -6,4 +6,3 @@
 # write network policy file
 # Write RBAC file, role and cluster and their bindings. 
 # write persistent volume file. 
-write 
