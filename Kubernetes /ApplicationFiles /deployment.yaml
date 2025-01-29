@@ -1,8 +1,0 @@
-# specify memory requests and limits in a file
-# write an ingress resource file
-# Write a deployment file
-# specify liveness and readiness probe which kubelet continuously checks 
-# write services file, load balancer, node port
-# write network policy file
-# Write RBAC file, role and cluster and their bindings. 
-# write persistent volume file. 
