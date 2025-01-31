@@ -16,7 +16,13 @@
      
  #2. start and enable a service ( service module )
  
- - name: 
+    - name: start nginx
+      service: 
+        name: nginx 
+        state: started 
+        
+         
+
  
  
   
