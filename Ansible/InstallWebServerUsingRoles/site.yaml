@@ -1,6 +1,6 @@
 --- 
 
-- name: Install nginx web server 
+- name: Deploy web and database 
   become: yes 
   become_user: root 
   hosts: all 
@@ -10,5 +10,9 @@
     vars: 
       apache_port: 8080
 
+    role: database
+
+    
+# to execute the play book execute the command - ansible-playbook site.yaml -i inventory 
 
  
