@@ -1,0 +1,39 @@
+# in this file we will learn about how to use roles in our playbook file
+
+# You can use Ansible Galaxy to create role structure automatically using command - 
+
+ansible-galaxy init my-role
+
+# this will create complete role folder structure 
+
+---
+
+- name: Install Apache 
+  yum:
+    name: httpd 
+    state: present 
+
+- name: Start and enable Apache 
+  service: 
+    name: httpd
+    state: started 
+    enabled: true 
+
+# Include role in the play book 
+
+- name: Deploy Web server 
+  hosts: webservers
+  roles:
+    - my-role
+
+# Include variable and overriding 
+
+- name: Deploy web server 
+  hosts: webservers
+  roles: 
+    - role: my-role 
+      vars: 
+        apache_port: 8080
+
+
+
