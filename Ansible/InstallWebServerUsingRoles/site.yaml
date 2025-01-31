@@ -1,0 +1,14 @@
+--- 
+
+- name: Install nginx web server 
+  become: yes 
+  become_user: root 
+  hosts: all 
+
+  roles: 
+    role: webserver
+    vars: 
+      apache_port: 8080
+
+
+ 
