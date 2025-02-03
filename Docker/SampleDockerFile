@@ -1,6 +1,0 @@
-# write 5 docker files
-
-COPY dependencies.json . 
-RUN npm install 
-COPY . . 
-
