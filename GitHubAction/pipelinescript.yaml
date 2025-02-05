@@ -1,0 +1,40 @@
+# We need to provide the script in the code folder itself in the path .github/workflows/deploy.yml
+
+name: Build and deploy node.js app
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      #checkout the code 
+      - name: checkout the code
+        uses: actions/checkout@v3
+
+      #setup node.js environment 
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '16'
+
+      #nstall dependencies 
+
+      - name: Install Dependencies
+        run: npm install 
+
+      #Build the project ( if applicable )
+
+      - name: build the project 
+        run: npm run build
+
+      # Deploy to server or other environment 
+
+      - name: Deploy ( Place holder)
+        run: echo "deploy step goes here"
+
+        
