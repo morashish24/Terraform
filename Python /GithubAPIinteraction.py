@@ -30,7 +30,7 @@ def user_repo_infomation (user_name):
     else:
         print ( f"Failed to etch repositories.Status code: {response.status_code}, Message: {response.json()}")
 
-if __name__="__main__":
+if __name__ == "__main__":
 
     #Ask user for GirHub username 
 
