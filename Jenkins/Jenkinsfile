@@ -1,0 +1,29 @@
+pipeline {
+    agent any 
+
+    environment {
+        APP_NAME = "my-sample-app"
+        DEPLOY_DIR = "var/www/my-sample-app"
+    }
+
+    stages {
+        stage ('checkout code') {
+            steps {
+                echo "clonning the repository for ${APP_NAME}..."
+                git branch: 'main', url: 'https://github.com/users/sample-repo.git'
+
+            }
+        }
+        stage ('build') {
+            steps {
+                echo " Deploying ${APP_NAME} to $ {DEPLOY_DIR}..."
+                sh """
+                mkdir -p ${DEPLOY_DIR}
+                cp -r * ${DEPLOY_DIR}
+                echo "Application deployed to ${DEPLOY_DIR}"
+                """ 
+                
+            }
+        }
+    }
+}
