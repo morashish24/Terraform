@@ -37,4 +37,17 @@ jobs:
       - name: Deploy ( Place holder)
         run: echo "deploy step goes here"
 
-        
+
+
+/* Explanation of the script 
+
+1. Trigger 
+2. on 
+3. Jobs 
+
+STEPS 
+  a. checkout - Use official GitHub Action actions/checkout to chone the repository into the runner.
+  b. setup node.js - Configures the Node.js environment using actions/setup-node 
+  c. Install dependencies - Runs npm install to install all the project dependencies. 
+  d. Build the Project - Run npm run build to build the application ( if your project has build step)
+  e. Deploy - This is where you will add your actual deployment command. 
