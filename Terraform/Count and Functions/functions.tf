@@ -48,7 +48,14 @@ variale "instance_names" {
 }
 
 resuorce "aws_instance" "example" { 
-    count = legnth 
+    count = length ( var.instance_names)
+
+    instance_type = "t2.micro"
+    ami = "ami-123456"
+
+    tags = {
+        Name = "instance - ${var.instance_names[count.index]}"   # this is called terraform interpolation 
+    }
 } 
  6. LookUp function 
 
