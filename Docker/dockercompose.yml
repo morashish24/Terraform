@@ -1,0 +1,7 @@
+FROM alpine
+COPY /app.java .
+WORKDIR /app/java/
+RUN npm install
+ENTRYPOINT ["systemctl"] 
+CMD ["service start"]
+EXPOSE 8080 
