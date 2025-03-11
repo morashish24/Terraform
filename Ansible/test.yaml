@@ -1,15 +1,17 @@
 ---
 
-- name: Install web and database 
-  host: webserver
-  become: root 
+name: creating user in server 
+hosts: all
+become: yes
 
-  roles:
-  - role: webserver
-    vars:
-      apache_port: 8080
-  - role: database 
-    
+tasks:
+    - name: create user 
+      user:
+        name: devops
+        state: present 
+        shell: bin/bash
+
+        
     
       
   
